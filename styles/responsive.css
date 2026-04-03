@@ -12,18 +12,24 @@
 }
 
 @media screen and (max-width: 992px) {
+    /* --- Sections générales --- */
     section {
-        padding: 60px 5%;
-    }
-    /* Cacher menu desktop */
-    .nav-menu {
-        display: none;
+        padding: 50px 5%;
+        margin: 40px 15px; /* Réduit l'espace vide sur les côtés */
     }
 
-    /* Afficher hamburger */
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* --- Navbar : Bascule vers le menu Mobile --- */
+    .nav-menu {
+        display: none; /* Cache le menu classique Desktop */
+    }
+
     .nav-toggle {
-        display: flex;
-        margin-left: 10px;
+        display: flex; /* Affiche le bouton hamburger */
+        margin-left: 15px;
     }
 
     .nav-right {
@@ -35,18 +41,11 @@
         top: 100%; 
         left: 0;
         width: 100%;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-
-    /* Zone droite: garder boutons + hamburger alignés */
+    
     .nav-buttons {
-        order: 2;
-    }
-
-    /* Menu mobile: afficher quand actif */
-    .nav-mobile.active {
-        display: flex;
+        order: 2; /* Garde le bouton de langue à côté du menu hamburger */
     }
 }
 
@@ -151,5 +150,141 @@
     /* Burger menu plus petit */
     .hamburger {
         width: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* --- En-tête et Textes --- */
+    header {
+        padding: 50px 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* --- Adaptation des Grilles pour le mobile --- */
+    /* Passage à UNE SEULE COLONNE pour ne pas écraser les textes */
+    .projects-container,
+    .certifications-container,
+    .contact-grid,
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Centres d'intérêt : 2 petites colonnes max sur mobile */
+    .interest-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    /* Compétences techniques : on réduit la taille des boutons */
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 10px;
+    }
+
+    .tech-item {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .tech-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* --- Ajustement du Formulaire de contact (si présent) --- */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* --- Ajustement des marges internes des cartes --- */
+    .project-card,
+    .contact-card,
+    .pro-exp, 
+    .degree-card,
+    .cert-card {
+        padding: 20px 15px; /* Un peu moins de rembourrage sur mobile */
+    }
+}
+
+/* =========================================
+   3. PETITS SMARTPHONES (max-width: 480px)
+========================================= */
+@media screen and (max-width: 480px) {
+    /* --- Optimisation de la Navbar pour gagner de la place --- */
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .nav-logo {
+        font-size: 1.1rem;
+        max-width: 140px; /* Empêche le logo de pousser les boutons */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Ajoute des "..." si le texte est trop long */
+    }
+
+    .lang-toggle-btn {
+        height: 32px;
+        min-width: 32px;
+        font-size: 0.85rem;
+        padding: 0 6px;
+    }
+
+    .nav-toggle {
+        padding: 0.2rem;
+    }
+
+    .hamburger {
+        width: 22px;
+        margin: 3px 0;
+    }
+
+    /* --- Sections et Textes encore réduits --- */
+    section {
+        padding: 40px 15px;
+        margin: 30px 10px;
+        border-radius: 15px; /* Bordures légèrement moins arrondies */
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* --- Miniatures et Cartes réduites --- */
+    .interest-card {
+        padding: 15px;
+    }
+
+    .interest-card img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .languages-list li {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.9rem;
     }
 }
