@@ -863,6 +863,62 @@ h2 {
 .interest-card p { font-size: 0.9rem; line-height: 1.5; color: #ccc; }
 .interest-card:hover img { transform: scale(1.08); }
 
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.cert-card {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.15);
+}
+
+/* Zone de l'icône */
+.cert-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: #252525;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Zone du texte */
+.cert-info {
+    flex: 1;
+}
+
+.cert-info h4 {
+    margin: 0 0 8px 0;
+    color: #a0c7f9;
+    font-size: 1.1rem;
+}
+
+.cert-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+}
+
 /* ----------------------------------------
    PROJETS
 -----------------------------------------*/
