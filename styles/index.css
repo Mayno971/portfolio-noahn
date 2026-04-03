@@ -304,6 +304,7 @@ h2 {
 
 .profile-subsection {
     margin-bottom: 60px; 
+    justify-content: center;
 }
 
 .profile-subsection h3 {
