@@ -35,7 +35,11 @@
                     Me contacter </a>
             </button>
         </div>
-        <p id="scroll-message" data-translate="scroll_message">⬇ Faites défiler vers le bas ⬇</p>
+        <p id="scroll-message" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            <span data-translate="scroll_message">Faites défiler vers le bas</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </p>
     </div>
 
     <!-- HEADER -->
@@ -62,10 +66,16 @@
             <div class="nav-right">
 
                 <div class="nav-menu">
-                    <a href="#about" class="nav-link" data-translate="nav_about">À propos</a>
+                    <a href="#about" class="nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span data-translate="nav_about">À propos</span>
+                    </a>
 
                     <div class="nav-dropdown">
-                        <a href="#profile" class="nav-link" data-translate="nav_profile">Profil</a>
+                        <a href="#profile" class="nav-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            <span data-translate="nav_profile">Profil</span>
+                        </a>
                         <div class="dropdown-content">
                             <a href="#experiences" data-translate="exp_title">Expériences</a>
                             <a href="#competences" data-translate="tech_skills">Compétences</a>
@@ -76,8 +86,14 @@
                         </div>
                     </div>
 
-                    <a href="#projects" class="nav-link" data-translate="nav_projects">Projets</a>
-                    <a href="#contacts" class="nav-link" data-translate="nav_contacts">Contact</a>
+                    <a href="#projects" class="nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                        <span data-translate="nav_projects">Projets</span>
+                    </a>
+                    <a href="#contacts" class="nav-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <span data-translate="nav_contacts">Contact</span>
+                    </a>
                 </div>
 
                 <!--
@@ -98,9 +114,15 @@
         </div>
 
         <div class="nav-mobile" id="nav-mobile">
-            <a href="#about" class="nav-mobile-link" data-translate="nav_about">À propos</a>
+            <a href="#about" class="nav-mobile-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span data-translate="nav_about">À propos</span>
+            </a>
 
-            <a href="#profile" class="nav-mobile-link" data-translate="nav_profile">Profil</a>
+            <a href="#profile" class="nav-mobile-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span data-translate="nav_profile">Profil</span>
+            </a>
             <div class="mobile-sublinks">
                 <a href="#experiences" class="nav-mobile-sublink" data-translate="exp_title">Expériences</a>
                 <a href="#competences" class="nav-mobile-sublink" data-translate="tech_skills">Compétences</a>
@@ -110,8 +132,14 @@
                 <a href="#certifications" class="nav-mobile-sublink">Certifications</a>
             </div>
 
-            <a href="#projects" class="nav-mobile-link" data-translate="nav_projects">Projets</a>
-            <a href="#contacts" class="nav-mobile-link" data-translate="nav_contacts">Contact</a>
+            <a href="#projects" class="nav-mobile-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                <span data-translate="nav_projects">Projets</span>
+            </a>
+            <a href="#contacts" class="nav-mobile-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span data-translate="nav_contacts">Contact</span>
+            </a>
         </div>
     </nav>
 
@@ -121,7 +149,10 @@
 
         <!-- À PROPOS -->
         <section id="about" class="reveal">
-            <h2 data-translate="about_title">À propos de moi</h2>
+            <h2>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span data-translate="about_title">À propos de moi</span>
+            </h2>
             <p>
                 Je m'appelle <strong>Noahn de LACROIX</strong>, j’ai 19 ans et je suis actuellement étudiant en Bachelor
                 Universitaire de
@@ -154,11 +185,17 @@
         <!-- 🧩 PROFIL PROFESSIONNEL -->
         <section id="profile">
             <div class="section-header reveal">
-                <h2 data-translate="profile_title">Profil professionnel</h2>
+                <h2>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span data-translate="profile_title">Profil professionnel</span>
+                </h2>
             </div>
 
             <div class="profile-subsection" id="experiences">
-                <h3 data-translate="exp_title" class="reveal">Expériences Professionnelles</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span data-translate="exp_title">Expériences Professionnelles</span>
+                </h3>
 
                 <div class="degree-timeline">
                     <div class="timeline-line"></div>
@@ -201,7 +238,10 @@
             </div>
             <!-- 🔧 COMPÉTENCES TECHNIQUES -->
             <div class="profile-subsection" id="competence">
-                <h3 data-translate="tech_skills" class="reveal">Compétences Techniques</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <span data-translate="tech_skills">Compétences Techniques</span>
+                </h3>
 
                 <div class="skills-container">
                     <h4 class="type_skills reveal" data-translate="skills_dev">Développement Logiciel & Web</h4>
@@ -275,7 +315,10 @@
 
             <!-- 🎯 QUALITÉS PERSONNELLES -->
             <div class="profile-subsection" id="qualite">
-                <h3 data-translate="qualities_title" class="reveal">Qualités personnelles</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span data-translate="qualities_title">Qualités personnelles</span>
+                </h3>
 
                 <div class="qualities-container reveal">
                     <div class="qualities">
@@ -289,7 +332,10 @@
             </div>
 
             <div class="profile-subsection" id="diplomes">
-                <h3 data-translate="degrees_title" class="reveal">Mes diplômes obtenus</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    <span data-translate="degrees_title">Mes diplômes obtenus</span>
+                </h3>
 
                 <div class="degree-timeline">
                     <div class="timeline-line"></div>
@@ -333,7 +379,10 @@
 
             <!-- 🌟 Langues parlées -->
             <div class="profile-subsection" id="langues">
-                <h3 data-translate="languages_title" class="reveal">Langues parlées</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span data-translate="languages_title">Langues parlées</span>
+                </h3>
 
                 <div class="languages-container reveal">
                     <ul class="languages-list card">
@@ -359,7 +408,10 @@
 
             <!-- CENTRES D'INTÉRÊT -->
             <div class="profile-subsection" id="interets">
-                <h3 data-translate="interests_title" class="reveal">Centres d'intérêt</h3>
+                <h3 class="reveal">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    <span data-translate="interests_title">Centres d'intérêt</span>
+                </h3>
 
                 <div class="interests-container">
                     <div class="interest-grid">
@@ -411,7 +463,10 @@
                 </div>
 <br>
                 <div class="profile-subsection" id="certifications">
-                    <h3 data-translate="certs_title" class="reveal">Certifications</h3>
+                    <h3 class="reveal">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+                        <span data-translate="certs_title">Certifications</span>
+                    </h3>
 
                     <div class="certifications-container">
                         <div class="cert-card reveal">
@@ -454,7 +509,10 @@
 
         <!-- PROJETS -->
         <section id="projects" class="reveal">
-            <h2>Mes Projets Professionels et personnels</h2>
+            <h2>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                <span data-translate="projects_title">Mes Projets Professionnels et personnels</span>
+            </h2>
             <p>Découvrez mes réalisations dans le domaine informatique</p>
 
             <div class="project-card">
@@ -551,7 +609,10 @@
         <!-- CONTACT -->
         <section id="contacts" class="contact">
             <div class="contact-container">
-                <h2>Contactez-moi</h2>
+                <h2>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span data-translate="contact_title">Contactez-moi</span>
+                </h2>
                 <p>Intéressé par une collaboration ? N'hésitez pas à me contacter</p>
                 <div class="contact-grid">
                     <a href="mailto:nodelac@gmail.com" class="contact-card clickable-card">
