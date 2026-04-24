@@ -1,12 +1,32 @@
 /* ----------------------------------------
+   VARIABLES GLOBALES (:root)
+-----------------------------------------*/
+:root {
+    /* Couleurs principales */
+    --bg-main: #0b0b0b;
+    --bg-section: #161616;
+    --text-main: #f1f1f1;
+    --primary-color: #66a3ff;
+    --primary-hover: #aaccff;
+    --accent-color: #3e7bff;
+    
+    /* Layout & Tailles */
+    --max-width-section: 1400px;
+    --max-width-nav: 1300px;
+    --border-radius-base: 15px;
+    --border-radius-large: 20px;
+    --transition-speed: 0.3s;
+}
+
+/* ----------------------------------------
    🌗 MODE JOUR / NUIT
 -----------------------------------------*/
 body {
     margin: 0;
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #0b0b0b;
-    color: #f1f1f1;
-    transition: background 0.3s, color 0.3s;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background var(--transition-speed), color var(--transition-speed);
     scroll-behavior: smooth; /* Scroll fluide natif */
 }
 
@@ -40,22 +60,25 @@ header h2 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: all 0.3s ease;
-    padding: 1rem 0;
-    background: rgba(0, 0, 0, 0.85);
-    border-bottom: 1px solid #222;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 1.2rem 0;
+    background: rgba(11, 11, 11, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar.scrolled {
     position: sticky;    
     top: 0;
-    background: rgba(37, 39, 43, 0.95);
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
+    padding: 0.8rem 0;
+    background: rgba(22, 22, 22, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
-    max-width: 1300px;
+    max-width: var(--max-width-nav);
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
@@ -81,8 +104,9 @@ header h2 {
 }
 
 .nav-logo:hover {
-    transform: scale(1.05);
-    opacity: 0.8;
+    transform: translateY(-2px);
+    opacity: 1;
+    filter: drop-shadow(0 4px 10px rgba(102, 163, 255, 0.3));
 }
 
 .nav-menu {
@@ -93,24 +117,27 @@ header h2 {
 }
 
 .nav-link {
-    color: #66a3ff;
+    color: var(--text-main);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    transition: color var(--transition-speed) ease;
     position: relative;
 }
 
-.nav-link:hover { color: #aaccff; }
+.nav-link:hover { color: var(--primary-hover); }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -2px; 
+    bottom: 0px; 
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #60a5fa, #a855f7);
-    transition: 0.3s ease;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* =========================================
@@ -155,13 +182,14 @@ header h2 {
     padding: 12px 20px;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: background 0.3s, color 0.3s;
-    text-align: center;
+    transition: all 0.3s ease;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-    background: rgba(96, 165, 250, 0.15);
-    color: #60a5fa;
+    background: rgba(102, 163, 255, 0.08);
+    color: var(--primary-color);
+    padding-left: 25px;
 }
 
 /* =========================================
@@ -209,21 +237,25 @@ header h2 {
     align-items: center;
     justify-content: center;
     height: 38px;  
-    min-width: 38px;
-    padding: 0 10px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    background: #222;
-    border: 1px solid #444;
-    color: #f1f1f1;
+    min-width: 45px;
+    padding: 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
     cursor: pointer;
     backdrop-filter: blur(5px);
-    transition: opacity 0.2s ease, background 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .lang-toggle-btn:hover {
-    background: #333;
-    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .nav-toggle {
@@ -233,6 +265,12 @@ header h2 {
     border: none;
     cursor: pointer;
     padding: 0.3rem;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 6px;
 }
 
 .hamburger {
@@ -269,11 +307,18 @@ header h2 {
     color: #66a3ff;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.6rem 0;
+    padding: 0.8rem 0; /* Agrandissement de la zone tactile */
+    display: block;    /* S'assure que tout l'espace de la ligne est cliquable */
     transition: color 0.3s ease;
 }
 
 .nav-mobile-link:hover { color: #aaccff; }
+
+.nav-mobile-link:focus-visible, .nav-mobile-sublink:focus-visible {
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
 
 #floating-name {
     background: #003d99;
@@ -288,15 +333,15 @@ header h2 {
 section {
     padding: 60px 10%; /* Léger ajustement pour laisser respirer les cartes */
     margin: 60px auto;
-    max-width: 1400px;
-    background: #161616;
+    max-width: var(--max-width-section);
+    background: var(--bg-section);
     border: 1px solid #222;
-    border-radius: 20px;
+    border-radius: var(--border-radius-large);
 }
 
 h2 {
     font-size: 2.2rem;
-    color: #66a3ff;
+    color: var(--primary-color);
     margin-bottom: 30px;
     border-bottom: 1px solid rgba(102, 163, 255, 0.2);
     padding-bottom: 10px;

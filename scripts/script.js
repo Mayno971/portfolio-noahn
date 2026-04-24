@@ -15,12 +15,21 @@
     window.addEventListener('scroll', function() {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
+    
+    // Initialisation Accessibilité (A11y) du bouton menu
+    if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
 
     // 2️⃣ Fonction centralisée pour fermer proprement le menu mobile
     function closeMobileMenu() {
         if (navMobile.classList.contains('active')) {
             navMobile.classList.remove('active');
             
+            if (navToggle) {
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+
             // Réinitialiser l'icône hamburger
             const hamburgers = navToggle.querySelectorAll('.hamburger');
             hamburgers.forEach(bar => {
@@ -37,6 +46,8 @@
 
             const hamburgers = navToggle.querySelectorAll('.hamburger');
             const menuOpen = navMobile.classList.contains('active');
+
+            navToggle.setAttribute('aria-expanded', menuOpen);
 
             // Animation de transformation du Hamburger en croix "X"
             hamburgers.forEach((bar, i) => {
@@ -75,35 +86,6 @@
                 const offset = 90; 
                 const top = targetSection.getBoundingClientRect().top + window.scrollY - offset;
                 
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Fermer le menu mobile au clic
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMobile.classList.remove('active');
-
-            const hamburgers = navToggle.querySelectorAll('.hamburger');
-            hamburgers.forEach(bar => {
-                bar.style.transform = 'none';
-                bar.style.opacity = '1';
-            });
-        });
-    });
-
-    // Scroll fluide
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (!targetId.startsWith("#")) return;
-
-            e.preventDefault();
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                const top = targetSection.offsetTop - 80;
                 window.scrollTo({ top, behavior: 'smooth' });
             }
         });
